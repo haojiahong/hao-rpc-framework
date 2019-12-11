@@ -15,6 +15,7 @@
         <module>hello-service-api</module>
         <module>rpc-api</module>
         <module>rpc-netty</module>
+        <module>study-part</module>
     </modules>
 
     <name>hao-rpc-framework</name>
@@ -53,6 +54,11 @@
                 <groupId>io.netty</groupId>
                 <artifactId>netty-all</artifactId>
                 <version>${netty.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.javassist</groupId>
+                <artifactId>javassist</artifactId>
+                <version>3.21.0-GA</version>
             </dependency>
         </dependencies>
     </dependencyManagement>
