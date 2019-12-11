@@ -1,0 +1,3 @@
+com.hjh.hao.rpc.serialize.impl.MetadataSerializer
+com.hjh.hao.rpc.serialize.impl.RpcRequestSerializer
+com.hjh.hao.rpc.serialize.impl.StringSerializer
