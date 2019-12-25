@@ -16,8 +16,12 @@
  */
 package com.alibaba.dubbo.demo;
 
+import com.alibaba.dubbo.demo.dto.ChildDTO;
+
 public interface DemoService {
 
     String sayHello(String name);
+
+    void printeChild(ChildDTO childDTO);
 
 }

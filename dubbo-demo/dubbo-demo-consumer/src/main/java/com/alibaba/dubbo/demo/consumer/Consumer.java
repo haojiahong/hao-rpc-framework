@@ -17,6 +17,7 @@
 package com.alibaba.dubbo.demo.consumer;
 
 import com.alibaba.dubbo.demo.DemoService;
+import com.alibaba.dubbo.demo.dto.ChildDTO;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 public class Consumer {
@@ -28,19 +29,23 @@ public class Consumer {
         ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext(new String[]{"META-INF/spring/dubbo-demo-consumer.xml"});
         context.start();
         DemoService demoService = (DemoService) context.getBean("demoService"); // get remote service proxy
+        ChildDTO childDTO = new ChildDTO();
+        childDTO.setName("hao");
+        childDTO.setAge("12");
+        demoService.printeChild(childDTO);
 
-        while (true) {
-            try {
-                Thread.sleep(1000);
-                String hello = demoService.sayHello("world"); // call remote method
-                System.out.println(hello); // get result
-
-            } catch (Throwable throwable) {
-                throwable.printStackTrace();
-            }
-
-
-        }
+//        while (true) {
+//            try {
+//                Thread.sleep(1000);
+//                String hello = demoService.sayHello("world"); // call remote method
+//                System.out.println(hello); // get result
+//
+//            } catch (Throwable throwable) {
+//                throwable.printStackTrace();
+//            }
+//
+//
+//        }
 
     }
 }

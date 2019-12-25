@@ -147,4 +147,10 @@ public class AtomicPositiveInteger extends Number {
         AtomicPositiveInteger other = (AtomicPositiveInteger) obj;
         return intValue() == other.intValue();
     }
+
+    public static void main(String[] args) {
+        System.out.println((Integer.MAX_VALUE + 100) & Integer.MAX_VALUE);
+        System.out.println(Integer.MAX_VALUE+100);
+        System.out.println(Integer.MAX_VALUE);
+    }
 }
